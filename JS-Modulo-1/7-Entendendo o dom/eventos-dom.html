@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+    div#area{
+        font: normal 18pt arial;
+        background: rgb(0, 102, 0);
+        color: white;
+        width: 200pt;/* width é a largura do*/
+        height: 200pt;/*refrente a altura*/
+        line-height: 200pt;/*refrente a centralizacçao do texto*/
+        text-align: center;/*referente a centralisação do texto*/
+
+    }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout='sair()'>
+        interaja...
+    </div>
+
+    <script>
+        function clicar(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'clicou!'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            var a = window.document.getElementById('area')
+            a.style.background = 'rgb(1, 172, 1)'
+        }
+        function sair(){
+            var a = window.document.getElementById('area')
+            a.style.background = 'rgb(0, 102, 0)'
+            a.innerText ='interaja...'
+        }
+    </script>
+</body>
+</html>

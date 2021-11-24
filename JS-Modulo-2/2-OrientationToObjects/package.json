@@ -1,0 +1,12 @@
+{
+  "name": "bitebank",
+  "version": "1.0.0",
+  "description": "Projeto modulo 2 javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Gonçalves",
+  "license": "ISC",
+  "type": "module"
+}
