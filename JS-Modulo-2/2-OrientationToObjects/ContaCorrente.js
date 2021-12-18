@@ -1,17 +1,14 @@
 import { ClienteMolde } from "./Cliente.js";
 
 export class ContaCorrente { // ? A classe apenas representa um objeto, não é o objeto em si.
-  agencia;
+  #agencia;
+  #cliente;
+  #saldo = 0; 
 
   static numeroDeContas = 0;
 
-  #cliente;
-  #saldo = 0; 
-  // ! o "#" faz com que a variavel seja privada, porém a convenção dos programadores também utilizam o "_" apenas para representação
-  // ! this infere no objeto em si que foi criado já quando se utiliza o static é relacionado a aquele class como um todo.
-
   constructor(agencia, cliente) {
-    this.agencia = agencia;
+    this.#agencia = agencia;
     ContaCorrente.numeroDeContas += 1;
     if(cliente instanceof ClienteMolde) this.#cliente = cliente;
   }
@@ -27,7 +24,7 @@ export class ContaCorrente { // ? A classe apenas representa um objeto, não é 
 
   transferir(valor, conta) {
     const valorSacado = this.sacar(valor);
-    conta.depositar(valorSacado)
+    conta.depositar(valorSacado);
   }
 
   set setCliente(novoValor) {
@@ -35,10 +32,14 @@ export class ContaCorrente { // ? A classe apenas representa um objeto, não é 
   }
 
   get getCliente() {
-    return this.#cliente
+    return this.#cliente;
   }
 
   get getSaldo() {
-    return this.#saldo
+    return this.#saldo;
+  }
+
+  get getAgencia() {
+    return this.#agencia;
   }
 };

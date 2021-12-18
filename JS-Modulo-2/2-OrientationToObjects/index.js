@@ -9,16 +9,19 @@ const contaCorrenteLucas = new ContaCorrente(1004, cliente1);
 const contaCorrenteSergio = new ContaCorrente(104, cliente2);
 
 // * adicionando dinheiro na conta
-contaCorrenteLucas.depositar(500);
+// contaCorrenteLucas.depositar(500);
 
 // * retirando dinheiro da conta
-contaCorrenteLucas.sacar(50);
+// contaCorrenteLucas.sacar(50);
 
 // * transferindo dinheiro da conta
-contaCorrenteLucas.transferir(200, contaCorrenteSergio); 
+// contaCorrenteLucas.transferir(200, contaCorrenteSergio); 
+
+// * mostrando cpf da conta
+// console.log(cliente1.getCpf)
 
 // * contador de contas
-console.log(ContaCorrente.numeroDeContas);
+// console.log(ContaCorrente.numeroDeContas);
 
-console.log(contaCorrenteLucas);
+console.log(contaCorrenteLucas.getAgencia);
 console.log(contaCorrenteSergio.getCliente);
